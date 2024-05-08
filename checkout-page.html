@@ -32,13 +32,13 @@
                <div>  <h2>PHASE 1-SILVER</h2></div>
                <div>    <span class="price">Rs. 999</span>
                   <span class="multiplication">x</span>
-                  <select name="tickets" class="number-of-tickets">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
+                  <select name="tickets" class="number-of-tickets" onchange="enableCheckoutButton()">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
                   </select></div>
            
             </div>
@@ -50,13 +50,13 @@
                <div>  <h2>PHASE 1-GOLD</h2></div>
                <div>    <span class="price">Rs.1499</span>
                   <span class="multiplication">x</span>
-                  <select name="tickets" class="number-of-tickets">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
+                  <select name="tickets" class="number-of-tickets" onchange="enableCheckoutButton()">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
                   </select></div>
            
             </div>
@@ -68,13 +68,13 @@
                <div>  <h2>PHASE 1-FANPIT</h2></div>
                <div>    <span class="price">Rs. 2499</span>
                   <span class="multiplication">x</span>
-                  <select name="tickets" class="number-of-tickets">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
+                  <select name="tickets" class="number-of-tickets" onchange="enableCheckoutButton()">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
                   </select></div>
            
             </div>
@@ -86,13 +86,13 @@
                <div>   <h2>GOLD TABLE (4-6PAX) | STANDING COCKTAIL TABLE</h2></div>
                <div>    <span class="price">Rs. 50000</span>
                   <span class="multiplication">x</span>
-                  <select name="tickets" class="number-of-tickets">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
+                  <select name="tickets" class="number-of-tickets" onchange="enableCheckoutButton()">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
                   </select></div>
            
             </div>
@@ -108,13 +108,13 @@
                <div>   <h2>DIAMOND TABLE (6-8 PAX) | SEATING SOFA</h2></div>
                <div>    <span class="price">Rs. 85000</span>
                   <span class="multiplication">x</span>
-                  <select name="tickets" class="number-of-tickets">
-                     <option>0</option>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
+                  <select name="tickets" class="number-of-tickets" onchange="enableCheckoutButton()">
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
                   </select></div>
            
             </div>
@@ -125,7 +125,7 @@
             <span class="final-price check_final">Rs.0</span>  
          </div>
          <div class="checkout-btn check_new">
-            <a id="checkoutBtn" href="./finalpage.html" class="disabled">Checkout</a>
+            <a id="checkoutBtn" onclick="checkout()" class="disabled">Checkout</a>
          </div>
       </div> 
    </div>
@@ -135,7 +135,23 @@
  </div>
 </section>
 
+<script>
+   function enableCheckoutButton() {
+      var checkoutBtn = document.getElementById('checkoutBtn');
+      var selects = document.getElementsByClassName('number-of-tickets');
+      var totalTickets = 0;
+      for (var i = 0; i < selects.length; i++) {
+         totalTickets += parseInt(selects[i].value);
+      }
+      if (totalTickets > 0) {
+         checkoutBtn.classList.remove('disabled');
+         checkoutBtn.classList.remove('disabled1');
 
+      } else {
+         checkoutBtn.classList.add('disabled');
+      }
+   }
+</script>
 
 <div class="footer_card">
    <div class="red-bar"></div>
@@ -147,8 +163,6 @@
       <p>This is some footer text.</p>
    </footer>
 </div>
-
-
 
 </body>
 </html>
