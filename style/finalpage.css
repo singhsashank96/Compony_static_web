@@ -455,10 +455,13 @@ input[type="text"] {
     padding: 10px;
 }
 
+body{
+    background-color: #0E1055;
+
+}
 
 .Finel_div{
     background-color: #0E1055;
-    
     
 }
 
