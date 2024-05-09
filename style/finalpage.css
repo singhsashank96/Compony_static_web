@@ -20,7 +20,6 @@
     grid-template-columns: auto auto auto auto auto auto;
     gap: 50px;
     padding: 10px;
-    position: absolute;
     top: 0;
     width: 600px;
     margin-top: 40px;
@@ -36,7 +35,6 @@
     width: 400px;
     height: 40px;
     padding-top: 10%;
-    position: relative;
     right: 150px;
 
 
@@ -60,7 +58,6 @@
 }
 
 #logo {
-    position: relative;
     z-index: 1000;
     left: 50px;
     top: 30px;
@@ -240,7 +237,7 @@
 .price-entry_rs {
     color: #FFFFFF4D;
     font-family: "Inter", sans-serif;
-    position: relative;
+    /* position: relative; */
     left: 60%;
     font-weight: 400;
     font-size: 12px;
@@ -250,7 +247,7 @@
 
 .price-entry_text_four {
     padding-top: 10%;
-    position: relative;
+    /* position: relative; */
     left: 9%;
 }
 
@@ -293,7 +290,7 @@
 .price-entry_gold_quantity_rs {
     color: #FFFFFF4D;
     font-family: "Inter", sans-serif;
-    position: relative;
+    /* position: relative; */
     left: 60%;
     font-weight: 400;
     font-size: 12px;
@@ -320,7 +317,7 @@
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+    /* position: relative; */
     left: 40%;
 }
 
@@ -344,7 +341,7 @@
     display: inline-block;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+    /* position: relative; */
     left: 32%;
 }
 
@@ -362,7 +359,7 @@
     letter-spacing: -0.5px;
     text-align: left;
     display: inline-block;
-    position: relative;
+    /* position: relative; */
     left: 9%;
 }
 
@@ -397,13 +394,13 @@
 }
 
 #lname {
-    position: relative;
+    /* position: relative; */
     left: 51%;
     bottom: 24%;
 }
 
 .form--main_text_lastname {
-    position: relative;
+    /* position: relative; */
     bottom: 17.5%;
     left: 2%;
     font-size: 16px;
@@ -424,17 +421,17 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     color: #FFFFFF;
-    position: relative;
-    right: 48%;
+    /* position: relative; */
+    /* right: 48%; */
 }
 
 #form--main_email {
-    position: relative;
+    /* position: relative; */
     bottom: 8%;
 }
 
 .form--main_continue {
-    position: relative;
+    /* position: relative; */
     top: 19%;
 }
 input[type="text"] {
@@ -571,4 +568,39 @@ input[type="text"] {
     padding-top: 12%;
     font-size: 16px;
     font-weight: 200;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #FF005A;
+    height: 150px;
+    width: 100%;
+}
+
+
+
+.logo {
+    max-width: 100%; 
+    padding: 15px;
+    
+}
+
+.nav-menu {
+    color: #FFFFFF !important;
+    flex-grow: 1; /* Allow the nav-menu to grow and take up remaining space */
+    display: flex;
+    justify-content: center; /* Center the nav-menu items */
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 30px; /* Add spacing between menu items */
+
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #FFFFFF !important;
 }
